@@ -26,9 +26,9 @@ public class TahunPelaksanaan implements Serializable {
     private Long id;
      
      @Column(name = "tahun")
-     private Long tahun;
+     private String tahun;
 
-    public TahunPelaksanaan(Long id, Long tahun) {
+    public TahunPelaksanaan(Long id, String tahun) {
         this.id = id;
         this.tahun = tahun;
     }
@@ -44,11 +44,11 @@ public class TahunPelaksanaan implements Serializable {
         this.id = id;
     }
 
-    public Long getTahun() {
+    public String getTahun() {
         return tahun;
     }
 
-    public void setTahun(Long tahun) {
+    public void setTahun(String tahun) {
         this.tahun = tahun;
     }
    
