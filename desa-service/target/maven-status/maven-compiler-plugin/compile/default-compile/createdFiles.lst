@@ -1,0 +1,7 @@
+desa\micro\Application.class
+desa\micro\service\DesaService.class
+desa\micro\config\SwaggerConfig.class
+desa\micro\controller\DesaController.class
+desa\micro\model\Desa.class
+desa\micro\service\ServiceResponse.class
+desa\micro\config\HibernateUtil.class

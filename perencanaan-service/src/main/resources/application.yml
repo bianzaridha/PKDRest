@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: rpjm-service
+        
+server:
+    port: 8303
+    
+eureka:
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl:
+            defaultZone: http://localhost:8070/eureka
+    instance:
+        hostnmae: localhost
