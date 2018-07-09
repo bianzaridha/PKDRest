@@ -74,12 +74,6 @@ public class KegiatanController {
                 kg.getSasren(),
                 kg.getStatus());
         kegiatan.save(keg);
-        
-        PolaPelaksanaan pp = new PolaPelaksanaan(kegiatan.findById(kg.getPp().getId_kegiatan()).get(0), 
-                kg.getPp().getId(), 
-                kg.getPp().getNama());
-        
-        polapelaksanaan.save(pp);
         return new ServiceResponse(kg);
     }
     

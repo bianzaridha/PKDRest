@@ -9,12 +9,17 @@ import java.util.List;
 import org.hibernate.Session;
 import rpjm.micro.config.HibernateUtil;
 import rpjm.micro.model.TahunKegiatan;
+import rpjm.micro.proxy.TahunkegiatanProxy;
 
 /**
  *
  * @author bianza
  */
 public class TahunkegiatanService {
+    
+    KegiatanService kegserv = new KegiatanService();
+    TahunpelaksanaanService tpserv = new TahunpelaksanaanService();
+    
     public TahunKegiatan save(TahunKegiatan tk){
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
@@ -26,9 +31,25 @@ public class TahunkegiatanService {
         return tk;
     } 
 
-    public void batchSave(List<TahunKegiatan> list) {
-        for (TahunKegiatan live : list) {
-        this.save(live);
+    public void batchSave(List<TahunkegiatanProxy> list) {
+        for (TahunkegiatanProxy live : list) {
+            TahunKegiatan tk = new TahunKegiatan(
+                    kegserv.findById(live.getId_kegiatan()).get(0),
+                    tpserv.findById(live.getId_tp()).get(0),
+                    live.getLokasi(),
+                    live.getVolume(),
+                    live.getSaswan(),
+                    live.getSaspri(),
+                    live.getSasrtm(),
+                    live.getBiaya(),
+                    live.getWaktu(),
+                    live.getMulai(),
+                    live.getSelesai(),
+                    live.getPelaksana(),
+                    live.getPk(),
+                    live.getSumberdana());
+           
+        this.save(tk);
         }
     }
 

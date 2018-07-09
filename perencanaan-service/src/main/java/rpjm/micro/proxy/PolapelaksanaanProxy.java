@@ -12,7 +12,9 @@ package rpjm.micro.proxy;
 public class PolapelaksanaanProxy {
     
     private Long id_kegiatan;
+    
     private Long id;
+    
     private String nama;
 
     public Long getId_kegiatan() {
@@ -22,6 +24,7 @@ public class PolapelaksanaanProxy {
     public void setId_kegiatan(Long id_kegiatan) {
         this.id_kegiatan = id_kegiatan;
     }
+
 
     public Long getId() {
         return id;

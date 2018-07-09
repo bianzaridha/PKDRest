@@ -15,7 +15,6 @@ import rpjm.micro.model.PolaPelaksanaan;
 public class KegiatanProxy {
     
     private Long id_bidang;
-    private Long id_rpjm;
     private Long id;
     private String kode;
     private String nama;
@@ -25,7 +24,6 @@ public class KegiatanProxy {
     private String sasmanfaat;
     private String sasren;
     private Boolean status;
-    private PolapelaksanaanProxy pp;
     
 
     public Long getId_bidang() {
@@ -34,14 +32,6 @@ public class KegiatanProxy {
 
     public void setId_bidang(Long id_bidang) {
         this.id_bidang = id_bidang;
-    }
-
-    public Long getId_rpjm() {
-        return id_rpjm;
-    }
-
-    public void setId_rpjm(Long id_rpjm) {
-        this.id_rpjm = id_rpjm;
     }
 
     public Long getId() {
@@ -114,14 +104,6 @@ public class KegiatanProxy {
 
     public void setStatus(Boolean status) {
         this.status = status;
-    }
-
-    public PolapelaksanaanProxy getPp() {
-        return pp;
-    }
-
-    public void setPp(PolapelaksanaanProxy pp) {
-        this.pp = pp;
     }
 
 }

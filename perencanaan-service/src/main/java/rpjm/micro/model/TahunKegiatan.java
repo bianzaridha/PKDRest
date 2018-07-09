@@ -69,7 +69,7 @@ public class TahunKegiatan implements Serializable {
     @Column(name = "sumberdana")
     private String sumberdana;
 
-    public TahunKegiatan(Kegiatan kegiatan, TahunPelaksanaan tp, String lokasi, String volume, Long saswan, Long saspri, Long sasrtm, String sumberdana, Float biaya, String waktu, Date mulai, Date selesai, String pelaksana, Short pk) {
+    public TahunKegiatan(Kegiatan kegiatan, TahunPelaksanaan tp, String lokasi, String volume, Long saswan, Long saspri, Long sasrtm, Float biaya, String waktu, Date mulai, Date selesai, String pelaksana, Short pk, String sumberdana) {
         this.kegiatan = kegiatan;
         this.tp = tp;
         this.lokasi = lokasi;

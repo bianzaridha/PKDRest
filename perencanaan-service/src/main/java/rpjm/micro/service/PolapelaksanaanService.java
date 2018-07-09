@@ -9,12 +9,15 @@ import java.util.List;
 import org.hibernate.Session;
 import rpjm.micro.config.HibernateUtil;
 import rpjm.micro.model.PolaPelaksanaan;
+import rpjm.micro.proxy.PolapelaksanaanProxy;
 
 /**
  *
  * @author bianza
  */
 public class PolapelaksanaanService {
+    
+    KegiatanService kegserv = new KegiatanService();
     
     public PolaPelaksanaan save(PolaPelaksanaan pk){
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -27,9 +30,13 @@ public class PolapelaksanaanService {
         return pk;
     } 
 
-    public void batchSave(List<PolaPelaksanaan> list) {
-        for (PolaPelaksanaan live : list) {
-        this.save(live);
+    public void batchSave(List<PolapelaksanaanProxy> list) {
+        for (PolapelaksanaanProxy live : list) {
+            PolaPelaksanaan pp = new PolaPelaksanaan(
+                    kegserv.findById(live.getId_kegiatan()).get(0), 
+                    live.getId(), 
+                    live.getNama());
+            this.save(pp);
         }
     }
 
