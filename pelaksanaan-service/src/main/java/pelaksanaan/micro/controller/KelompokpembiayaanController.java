@@ -48,7 +48,7 @@ public class KelompokpembiayaanController {
         return kpemserv.findById(id);
     }
     
-    @RequestMapping(path = "/{id}",method = RequestMethod.GET)
+    @RequestMapping(path = "/bidang/{id}",method = RequestMethod.GET)
     public List<KelompokPembiayaan> getByBidang(@PathVariable("id") long id){
         return kpemserv.getAllByBidang(id);
     }

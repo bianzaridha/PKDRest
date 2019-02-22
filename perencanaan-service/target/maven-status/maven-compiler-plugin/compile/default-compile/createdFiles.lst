@@ -3,12 +3,15 @@ rpjm\micro\controller\RpjmController.class
 rpjm\micro\model\PolaPelaksanaan.class
 rpjm\micro\proxy\BidangProxy.class
 rpjm\micro\proxy\PolapelaksanaanProxy.class
+rpjm\micro\proxy\TahunkegiatanProxy.class
 rpjm\micro\service\ServiceResponse.class
 rpjm\micro\service\KegiatanService.class
+rpjm\micro\controller\RincianController.class
 rpjm\micro\service\PolapelaksanaanService.class
 rpjm\micro\controller\BidangController.class
 rpjm\micro\config\HibernateUtil.class
 rpjm\micro\service\RpjmService.class
+rpjm\micro\proxy\RincianProxy.class
 rpjm\micro\config\SwaggerConfig.class
 rpjm\micro\model\TahunKegiatan.class
 rpjm\micro\model\Kegiatan.class

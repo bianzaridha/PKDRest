@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     
-    <name>perencanaanV2-service</name>
+    <name>perencanaanV2RPJM-service</name>
     <description>Pengelolaan Keuangan Desa RPJM Service</description>
     
     <parent>

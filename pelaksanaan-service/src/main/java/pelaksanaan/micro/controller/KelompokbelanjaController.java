@@ -43,7 +43,7 @@ public class KelompokbelanjaController {
         return kbserv.getAll();
     }
     
-    @RequestMapping(path = "/apbd/{id}",method = RequestMethod.GET)
+    @RequestMapping(path = "/kegiatan/{id}",method = RequestMethod.GET)
     public List<KelompokBelanja> getByKegiatan(@PathVariable("id") long id){
         return kbserv.getAllByKegiatan(id);
     }
